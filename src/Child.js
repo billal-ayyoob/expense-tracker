@@ -89,7 +89,7 @@ function Child() {
                      required/>
                 </label>
                 <br />
-                <input type="submit" value="Add Transaction"/>
+                <input className="btn" type="submit" value="Add Transaction"/>
             </form>
         </div>
     );
