@@ -42,15 +42,18 @@ function Child() {
         <div className="container">
             <h1 className="text-center">ET (Expense Tracker)</h1>
 
-            <h3>Your Balance <br /> ${getIncome() + getExpense()} </h3>
+            <div className="balance">
+                <h4>Current Balance</h4>
+                <h1>${getIncome() + getExpense()}</h1>
+            </div>
         
             <div className="inc-exp-container">
                 <div>
-                    <h3>Income</h3>
+                    <h2>Income</h2>
                     <p className="money plus">${getIncome()}</p>
                 </div>
                 <div>
-                    <h3>Expense</h3>
+                    <h2>Expense</h2>
                     <p className="money minus">${getExpense()}</p>
                 </div>
             </div>
