@@ -42,9 +42,9 @@ function Child() {
         <div className="container">
             <h1 className="text-center">ET (Expense Tracker)</h1>
 
-            <div className="balance">
-                <h4>Current Balance</h4>
-                <h1>${getIncome() + getExpense()}</h1>
+            <div className="text-center">
+                <h4 className="reduce-space">Current Balance</h4>
+                <h1 className="reduce-space">${getIncome() + getExpense()}</h1>
             </div>
         
             <div className="inc-exp-container">

@@ -31,12 +31,11 @@
   justify-content: space-around;
   background-color: white;
   box-shadow: 0 0 10px gray;
-  padding: 20px;
-  margin: 20px 0;
+  padding: 5px;
 }
 .transaction-form input{
   display: block;
-  width: 100%;
+  width: 94%;
   font-size: 16px;
   margin: 10px 0;
   padding: 10px;
@@ -77,9 +76,9 @@
   margin: 10px 0 30px;
   font-weight: 700;
   padding: 10px;
+  width: 100% !important;
 }
 
-.balance > h4,h1{
-  text-align: center;
-  margin: 0;
+.reduce-space{
+  margin: 10px 0;
 }
