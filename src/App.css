@@ -37,3 +37,23 @@
   margin: 10px 0;
   padding: 5px 5px;
 }
+
+.money.plus {
+  color: #b6960a;
+  font-weight: 700;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.minus {
+  color: #2da3ad;
+  font-weight: 700;
+}
+
+.inc-exp-container>div:first-of-type {
+  border-right: 1px solid #dedede;
+}

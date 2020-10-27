@@ -45,8 +45,14 @@ function Child() {
             <h3>Your Balance <br /> ${getIncome() + getExpense()} </h3>
         
             <div className="inc-exp-container">
-                <h3>Income <br/> ${getIncome()}</h3>
-                <h3>Expense <br /> ${getExpense()}</h3>
+                <div>
+                    <h3>Income</h3>
+                    <p className="money plus">${getIncome()}</p>
+                </div>
+                <div>
+                    <h3>Expense</h3>
+                    <p className="money minus">${getExpense()}</p>
+                </div>
             </div>
 
             <h3>History</h3>
