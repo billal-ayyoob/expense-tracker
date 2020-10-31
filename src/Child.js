@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import {TransactionsContext} from './transactionsContext';
 
 function Child() {
-    let { transactions, AddTransaction } = useContext(TransactionsContext);
+    let { transactions, AddTransaction, DelTransaction } = useContext(TransactionsContext);
     let [newDesc, setDesc] = useState("");
     let [newAmount, setAmount] = useState(0);
     
@@ -12,7 +12,8 @@ function Child() {
             return false;
         }
         AddTransaction({
-            amount: Number(newAmount),
+            id: Math.floor(Math.random()*1000000000),
+            amount: +newAmount,
             desc: newDesc
         })
 
@@ -43,7 +44,7 @@ function Child() {
             <h1 className="text-center">ET (Expense Tracker)</h1>
 
             <div className="text-center">
-                <h4 className="reduce-space">Current Balance</h4>
+                <h3 className="reduce-space">Current Balance</h3>
                 <h1 className="reduce-space">${getIncome() + getExpense()}</h1>
             </div>
         
@@ -58,20 +59,23 @@ function Child() {
                 </div>
             </div>
 
-            <h3>History</h3>
-            <hr />
-            <ul className="transaction-list">
-                {transactions.map((transObj, ind) => {
-                    return (
-                        <li key={ind}>
-                            <span>{transObj.desc}</span>
-                            <span>${transObj.amount}</span>
-                        </li>
-                    )
-                })}
-            </ul>
+            <div>
+                <h3>Transaction History</h3>
+                <hr />
+                <ul className="transaction-list">
+                    {transactions.map((transaction) => {
+                        return (
+                            <li>
+                                {transaction.desc}
+                                <span>${transaction.amount}</span>
+                                <button class="delete-btn" type="button" onClick={() => DelTransaction(transaction.id)}>X</button>
+                            </li>
+                        )
+                    })}
+                </ul>
+            </div>
 
-            <h2>Transaction History</h2>
+            <h2>Add New Transaction</h2>
             <hr />
             <form className="transaction-form" onSubmit={handleAddition}>
                 <label>
@@ -98,3 +102,4 @@ function Child() {
     );
 }
 export default Child;
+

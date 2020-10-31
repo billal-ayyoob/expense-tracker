@@ -22,17 +22,34 @@
   justify-content: space-between;
   background-color: white;
   box-shadow: 0 0 10px gray;
-  padding: 10px 15px;
-  margin: 5px 0;
-  border-right: 4px solid green;
+  padding: 10px;
+  margin: 10px 0;
+  border-right: 4px solid #b6960a;
 }
+
+.transaction-list > li:hover {
+  background-color: #b6960a;
+  color: #f7f7f7;
+}
+
 .inc-exp-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: white;
   box-shadow: 0 0 10px gray;
-  padding: 5px;
+  padding: 20px;
+  margin: 20px 0;
 }
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container>div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
 .transaction-form input{
   display: block;
   width: 94%;
@@ -57,13 +74,13 @@
   font-weight: 700;
 }
 
-.inc-exp-container>div:first-of-type {
-  border-right: 1px solid #dedede;
-}
-
 .inc-exp-container>div {
   flex: 1 1;
   text-align: center;
+}
+
+.inc-exp-container>div>h2 {
+  margin: 0;
 }
 
 .btn {
@@ -82,3 +99,29 @@
 .reduce-space{
   margin: 10px 0;
 }
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #8a6a66;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 134%;
+  left: 33%;
+  transform: translate(-2%, 7%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.transaction-list li:hover .delete-btn {
+  opacity: 1;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 5px;
+}
+
