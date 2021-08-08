@@ -8,7 +8,8 @@ pipeline {
     stages {
         stage ('Checkout'){
             steps{
-                git Checkout 'jenkins-test'
+                git branch 'main'
+                url 'https://github.com/billal-ayyoob/ET-expense-tracker.git'
             }
         }
         stage ('Build'){
