@@ -7,9 +7,8 @@ pipeline {
     }
     stages {
         stage ('Checkout'){
-            steps{
-                git branch 'main'
-                url 'https://github.com/billal-ayyoob/ET-expense-tracker.git'
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/billal-ayyoob/ET-expense-tracker.git']]])
             }
         }
         stage ('Build'){
