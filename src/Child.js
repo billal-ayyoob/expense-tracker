@@ -41,7 +41,7 @@ function Child() {
 
     return(
         <div className="container">
-            <h1 className="text-center">ET (Expense Tracker)</h1>
+            <h1 className="text-center">Expense Tracker</h1>
 
             <div className="text-center">
                 <h3 className="reduce-space">Current Balance</h3>
